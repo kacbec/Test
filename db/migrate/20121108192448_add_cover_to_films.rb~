@@ -1,4 +1,4 @@
-class AddCoverToSongs < ActiveRecord::Migration
+class AddCoverToFilms < ActiveRecord::Migration
   def change
     add_column :films, :image, :string
   end

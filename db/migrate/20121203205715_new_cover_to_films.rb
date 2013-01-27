@@ -1,4 +1,4 @@
-class NewCoverToSongs < ActiveRecord::Migration
+class NewCoverToFilms < ActiveRecord::Migration
   def self.up
     add_column :films, :cover_file_name, :string
     add_column :films, :cover_content_type, :string
