@@ -6,7 +6,7 @@
   <%= @film.tag_list %>
 </p>
 <p>
-  <b>Poster:</b>
+  <b>Cover:</b>
 <% if @film.cover? %>
   <%= image_tag @film.cover.url %>
   <br />
@@ -20,12 +20,12 @@
 </p>
 
 <p>
-  <b>Director:</b>
+  <b>Author:</b>
   <%= @film.author %>
 </p>
 
 <p>
-  <b>Actors:</b>
+  <b>Aktors:</b>
   <%= @film.album %>
 </p>
 

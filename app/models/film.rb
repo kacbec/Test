@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 class Film < ActiveRecord::Base
 
   attr_accessible :album, :author, :length, :length_min, :title, :year, :tag_list,

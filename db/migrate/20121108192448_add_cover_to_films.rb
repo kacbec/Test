@@ -1,5 +1,5 @@
 class AddCoverToSongs < ActiveRecord::Migration
-  def change
-    add_column :songs, :image, :string
+   def change
+    add_column :films, :cover, :string
   end
 end

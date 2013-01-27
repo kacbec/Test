@@ -1,11 +1,11 @@
-<%- model_class = Song -%>
+<%- model_class = Film -%>
 <div class="page-header">
  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 </div>
 
-<%= form_tag songs_path, method: :get, id: "songs_search", class: "form-inline
+<%= form_tag films_path, method: :get, id: "films_search", class: "form-inline
 <div id="tag_cloud">
-  <% tag_cloud Song.tag_counts, %w[s m l] do |tag, css_class| %>
+  <% tag_cloud Film.tag_counts, %w[s m l] do |tag, css_class| %>
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
   <% end %>
 </div>
@@ -31,23 +31,23 @@
  </thead>
   <tbody>
 
-<% @songs.each do |song| %>
+<% @films.each do |film| %>
   <tr>
 
-    <th><%= song.id %></th>
-    <td><%= song.cover %></td>    
-    <td><%= song.title %></td>
-    <td><%= song.author %></td>
-    <td><%= song.album %></td>
-    <td><%= song.year %></td>
-    <td><%= song.length %></td>
-    <td><%= song.tag_list %></td>
+    <th><%= film.id %></th>
+    <td><%= film.cover %></td>    
+    <td><%= film.title %></td>
+    <td><%= film.author %></td>
+    <td><%= film.album %></td>
+    <td><%= film.year %></td>
+    <td><%= film.length %></td>
+    <td><%= film.tag_list %></td>
 
 
     <td> <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_song_path(song), :class => 'btn btn-mini' %> 
+                      edit_film_path(film), :class => 'btn btn-mini' %> 
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      song_path(song),
+                      film_path(film),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },                 
                       :class => 'btn btn-mini btn-danger' %>
@@ -59,4 +59,4 @@
 </table>
 
 
-<p><%= link_to t('.new', default: t("helpers.links.new")), new_song_path, :class => 'btn btn-primary' %></p>
+<p><%= link_to t('.new', default: t("helpers.links.new")), new_film_path, :class => 'btn btn-primary' %></p>

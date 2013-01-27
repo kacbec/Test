@@ -1,4 +1,4 @@
-<h1>Songs</h1>
+<h1>Films</h1>
 
 <table>
   <tr>
@@ -12,20 +12,20 @@
     <th></th>
   </tr>
 
-<% @songs.each do |song| %>
+<% @films.each do |film| %>
   <tr>
-    <td><%= song.title %></td>
-    <td><%= song.author %></td>
-    <td><%= song.album %></td>
-    <td><%= song.year %></td>
-    <td><%= song.length %></td>
-    <td><%= link_to 'Show', song %></td>
-    <td><%= link_to 'Edit', edit_song_path(song) %></td>
-    <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= film.title %></td>
+    <td><%= film.author %></td>
+    <td><%= film.album %></td>
+    <td><%= film.year %></td>
+    <td><%= film.length %></td>
+    <td><%= link_to 'Show', film %></td>
+    <td><%= link_to 'Edit', edit_film_path(film) %></td>
+    <td><%= link_to 'Destroy', film, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Song', new_song_path %>
+<%= link_to 'New Film', new_film_path %>

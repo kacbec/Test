@@ -1,15 +1,15 @@
-<%= simple_form_for(@song, :html => { :multipart => true }) do |f| %>
+<%= simple_form_for(@film, :html => { :multipart => true }) do |f| %>
   <%= f.error_notification %>
 
 <div class="control-group string optional">
     <div class="controls">
-    <% if @song.cover? %>
-      <%= image_tag @song.cover_url(:thumb) %>
-      <%= link_to t('.crop', default: t("helpers.links.tocrop")), crop_book_path(@song), class: 'btn' %>
+    <% if @film.cover? %>
+      <%= image_tag @film.cover_url(:thumb) %>
+      <%= link_to t('.crop', default: t("helpers.links.tocrop")), crop_book_path(@film), class: 'btn' %>
     <% end %>
     </div>
   </div>
-  <% unless @song.new_record? %>
+  <% unless @film.new_record? %>
     
   <% end %>
   
@@ -25,9 +25,9 @@
   </div>
  <div class="control-group string optional">
     <div class="controls">
-    <% if @song.cover? %>
-      <%= image_tag @song.cover_url(:thumb) %>
-      <%= link_to t('.crop', default: t("helpers.links.tocrop")), crop_song_path(@song), class: 'btn' %>
+    <% if @film.cover? %>
+      <%= image_tag @film.cover_url(:thumb) %>
+      <%= link_to t('.crop', default: t("helpers.links.tocrop")), crop_film_path(@film), class: 'btn' %>
     <% end %>
     </div>
   <div class="form-actions">

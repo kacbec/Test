@@ -22,10 +22,10 @@
   <tr>
   
     <th><%= model_class.human_attribute_name(:id) %></th>
-    <th><%= link_to "Poster" %></th>
-    <th><%= link_to "Title" %></th>
-    <th><%= link_to "Director" %></th>
-    <th><%= link_to "Actors" %></th>
+    <th><%= model_class.human_attribute_name(:cover) %></th>
+    <th><%= model_class.human_attribute_name(:title) %></th>
+    <th><%= model_class.human_attribute_name(:author) %></th>
+    <th><%= model_class.human_attribute_name(:album) %></th>
     <th><%= model_class.human_attribute_name(:year) %></th>
     <th><%= model_class.human_attribute_name(:length) %></th>
     <th><%= model_class.human_attribute_name(:tags) %></th>

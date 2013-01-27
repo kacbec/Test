@@ -61,11 +61,13 @@ module Radio
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.to_prepare do
+      Devise::SessionsController.layout "sign"
+    end
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
      ActsAsTaggableOn.delimiter = ' ' # use space as delimiter
-    config.assets.initialize_on_precompile = false
   end
 end
 

@@ -1,17 +1,27 @@
 Radio::Application.routes.draw do 
   devise_for :users
 
-   resources :songs do
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/failure"
+
+  get '/logout', :to => 'sessions#destroy'
+
+  devise_for :users, :controllers => { :sessions => :sessions }
+
+   resources :films do
   member do
       get 'crop'
     end
   end
-  get '/users/logout', :to => 'sessions#destroy'
-  match '/auth/:provider/callback', :to => 'sessionsf#create'
-  match '/auth/failure', :to => 'sessionsf#failure'
-  match '/signout', to: 'sessionsf#destroy', as: 'signout'
-get 'tags/:tag', to: 'songs#index', as: :tag
-root :to => 'songs#index'
+  get   '/login', :to => 'sessions#new', :as => :login
+  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/auth/failure', :to => 'sessions#failure'
+  match '/signout', to: 'sessions#destroy', as: 'signout'
+get 'tags/:tag', to: 'films#index', as: :tag
+root :to => 'films#index'
 end
 
   # The priority is based upon order of creation:

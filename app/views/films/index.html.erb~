@@ -1,7 +1,7 @@
-<%- model_class = Song -%>
+<%- model_class = Film -%>
 <div class="page-header">
  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
-<!--<h1>Songs</h1>-->
+<!--<h1>Films</h1>-->
 </div>
 <table class="table table-striped">
      <thead>
@@ -19,34 +19,34 @@
  </thead>
   <tbody>
 
-<% @songs.each do |song| %>
+<% @films.each do |film| %>
   <tr>
-    <td><%= song.title %></td>
-    <td><%= song.author %></td>
-    <td><%= song.album %></td>
-    <td><%= song.year %></td>
-    <td><%= song.length %></td>
-<!--    <td><%=l song.created_at %></td> data utowrzenia song-->
+    <td><%= film.title %></td>
+    <td><%= film.author %></td>
+    <td><%= film.album %></td>
+    <td><%= film.year %></td>
+    <td><%= film.length %></td>
+<!--    <td><%=l film.created_at %></td> data utowrzenia film-->
 <td> <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_song_path(song), :class => 'btn btn-mini' %>
+                      edit_film_path(film), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      song_path(song),
+                      film_path(film),
                       :method => :delete,
                  
                       :class => 'btn btn-mini btn-danger' %>
 </td>
-<!--    <td><%= link_to 'Show', song %></td>
-    <td><%= link_to 'Edit', edit_song_path(song) %></td>
-    <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+<!--    <td><%= link_to 'Show', film %></td>
+    <td><%= link_to 'Edit', edit_film_path(film) %></td>
+    <td><%= link_to 'Destroy', film, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
   </tr>
 <% end %>
  </tbody>
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_song_path,
+            new_film_path,
             :class => 'btn btn-primary' %>
 
 <!--<br />
 
-<%= link_to 'New Song', new_song_path %>-->
+<%= link_to 'New Film', new_film_path %>-->
