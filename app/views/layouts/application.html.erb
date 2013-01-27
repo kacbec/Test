@@ -3,7 +3,7 @@
 <head>
   <title>Filmoteka</title>
 
-  <%= render partial: 'shared/navbar' %>
+
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -11,10 +11,12 @@
   
 </head>
 <body>
+
 	<div id="MainContentBox">
+  		<%= render partial: 'shared/navbar' %>	
 <%= yield %>
 	</div>
 
-	<footer> <p><%= link_to "Link do My Github", "/auth/facebook", id: "sign_in" %></p></footer>
+	<footer> <p><%= link_to "Link do My Github", "https://github.com/kacbec" %></p></footer>
 </body>
 </html>

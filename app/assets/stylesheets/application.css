@@ -13,7 +13,7 @@
  */
 body { 
 	background-color: green;
-	margin-top: 60px; 
+	min-height: 650px;
 }
 
 #MainContentBox{
@@ -23,7 +23,7 @@ body {
 }
 
 .table .table-striped th img{
-width: 120px;
+max-width: 120px;
 border: solid 1px red;
 border-radius: 5px;
 
