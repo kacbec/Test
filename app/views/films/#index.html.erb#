@@ -1,11 +1,11 @@
-<%- model_class = Film -%>
+<%- model_class = Song -%>
 <div class="page-header">
  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 </div>
 
 <%= form_tag films_path, method: :get, id: "films_search", class: "form-inline
 <div id="tag_cloud">
-  <% tag_cloud Film.tag_counts, %w[s m l] do |tag, css_class| %>
+  <% tag_cloud Song.tag_counts, %w[s m l] do |tag, css_class| %>
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
   <% end %>
 </div>

@@ -28,4 +28,4 @@
 
 <br />
 
-<%= link_to 'New Film', new_film_path %>
+<%= link_to 'New Song', new_film_path %>
