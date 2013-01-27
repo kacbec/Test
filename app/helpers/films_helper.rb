@@ -1,2 +1,2 @@
-module SongsHelper
+module FilmsHelper
 end
