@@ -55,7 +55,7 @@
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       film_path(film),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },                 
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Jesteś pewien?')) },                 
                       :class => 'btn btn-mini btn-danger' %>
 </td>
 
@@ -64,5 +64,5 @@
  </tbody>
 </table>
 
+<p><%= link_to "Dodaj nowy film", new_film_path, :class => 'btn btn-primary' %></p>
 
-<p><%= link_to t('.new', default: t("helpers.links.new")), new_film_path, :class => 'btn btn-primary' %></p>

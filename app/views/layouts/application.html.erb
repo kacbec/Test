@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Radio</title>
+  <title>Filmoteka</title>
 
   <%= render partial: 'shared/navbar' %>
 
@@ -11,8 +11,10 @@
   
 </head>
 <body>
-
+	<div id="MainContentBox">
 <%= yield %>
+	</div>
 
+	<footer> <p><%= link_to "Link do My Github", "/auth/facebook", id: "sign_in" %></p></footer>
 </body>
 </html>
