@@ -1,0 +1,25 @@
+<%= simple_form_for(@film, :html => { :multipart => true }) do |f| %>
+  <%= f.error_notification %>
+
+
+  <% unless @film.new_record? %>
+    
+  <% end %>
+  
+  
+  <div class="form-inputs">
+    <%= f.input :tag_list, :label => "Tags (separated by spaces)" %>
+    <%= f.label :cover %><br />
+    <%= f.file_field :cover %>    
+    <%= f.input :title %>
+    <%= f.input :author %>
+    <%= f.input :album %>
+    <%= f.input :year %>
+    <%= f.input :length %>
+  </div>
+ <div class="control-group string optional">
+    
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

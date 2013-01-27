@@ -1,0 +1,34 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">Spis filmow</a>
+            <!--  <%= link_to "Link 1", "https://www.google.pl/" %>
+ -->
+            <ul class="nav pull-left">
+                        <div id="man_nav">
+                    <% if current_man %>
+                    Signed in as <strong>
+                        <%= current_man.name %></strong>!
+                    <%= link_to "Sign out from Facebook", signout_path, id: "sign_out" %>
+                    <% else %>
+                    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+                    <% end %>
+                </div>
+                <%= link_to "google", "https://www.google.pl/" %>
+            </ul>
+            <ul class="nav pull-right">
+                <li><a class="brand" href="/users/sign_up">Rejestracja</a></li>
+                <li>
+                    <div id="login_logout">
+                        <% unless user_signed_in? %>
+                        <li><a class="brand" href="/users/sign_in">Logowanie</a></li>
+                        <% else %>
+                        <%= current_user.email %>
+                </li>
+                <%= link_to 'Sign Out Movies', "/users/logout" %>
+                <% end %>
+        </div>
+        </ul>
+    </div>
+</div>
+

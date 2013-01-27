@@ -1,0 +1,44 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tags:</b>
+  <%= @film.tag_list %>
+</p>
+<p>
+  <b>Poster:</b>
+<% if @film.cover? %>
+  <%= image_tag @film.cover.url %>
+  <br />
+  <%= link_to @film.cover.url, @film.cover.url %>
+<% end %>
+
+</p> 
+<p>
+  <b>Title:</b>
+  <%= @film.title %>
+</p>
+
+<p>
+  <b>Director:</b>
+  <%= @film.author %>
+</p>
+
+<p>
+  <b>Actors:</b>
+  <%= @film.album %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @film.year %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @film.length_min %>
+</p>
+
+
+<%= link_to 'Edit', edit_film_path(@film) %> |
+<%= link_to 'Back', films_path %>
